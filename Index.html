@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lost RNG Anime Character Collector</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; max-width: 600px; }
+  #lastCharacter span { font-weight: bold; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  label { display: block; margin-top: 15px; font-weight: bold; }
+  button { margin-top: 10px; }
+  .rarity { font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>Lost RNG Anime Character Collector</h1>
+
+<button id="getCharBtn">Get Random Character</button>
+<div id="lastCharacter" style="margin-top: 10px;"></div>
+
+<label for="animeDropdown">Filter by Anime:</label>
+<select id="animeDropdown"></select>
+
+<h2>Your Inventory</h2>
+<ul id="inventory"></ul>
+
+<hr />
+
+<h2>Online Trading</h2>
+
+<div>
+  <label>Your Player ID (share this to trade):</label>
+  <input type="text" id="playerId" readonly style="width: 100%; font-family: monospace;"/>
+  <button id="copyIdBtn">Copy ID</button>
+</div>
+
+<div>
+  <label>Enter another Player ID to fetch their inventory:</label>
+  <input type="text" id="tradePlayerId" style="width: 100%; font-family: monospace;"/>
+  <button id="fetchTradeInventoryBtn">Fetch Player Inventory</button>
+</div>
+
+<h3>Other Player's Inventory</h3>
+<ul id="tradeInventory"></ul>
+
+<button id="tradeBtn" disabled>Trade Selected Character</button>
+
+<script src="app.js"></script>
+</body>
+</html>
